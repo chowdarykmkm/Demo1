@@ -14,11 +14,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+for(def rowNum=1;rowNum<=findTestData('mydata').getRowNumbers(); rowNum++ ){
+
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://store.demoqa.com/')
 
 WebUI.maximizeWindow()
+
 
 'Click on Buy button'
 WebUI.click(findTestObject('Object Repository/Online_OR/span_Buy Now'))
@@ -38,36 +42,36 @@ Thread.sleep(1000)
 WebUI.scrollToElement(findTestObject('Online_OR/firstname'), 20)
 
 'Enering First name data'
-WebUI.setText(findTestObject('Online_OR/firstname'), findTestData('mydata').getValue(2, 1))
+WebUI.setText(findTestObject('Online_OR/firstname'), findTestData('mydata').getValue(2, rowNum))
 
 'Entering Last name data'
-WebUI.setText(findTestObject('Online_OR/lastname'), findTestData('mydata').getValue(3, 1))
+WebUI.setText(findTestObject('Online_OR/lastname'), findTestData('mydata').getValue(3, rowNum))
 
 'Enter Address'
 WebUI.setText(findTestObject('Online_OR/address'), 'myaddress')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/Online_OR/select_Please select a country'), findTestData('mydata').getValue(
-        6, 1), true)
+        6, rowNum), true)
 
 'Enter City'
-WebUI.setText(findTestObject('Online_OR/city'), findTestData('mydata').getValue(5, 1))
+WebUI.setText(findTestObject('Online_OR/city'), findTestData('mydata').getValue(5, rowNum))
 
 'Enter State'
-WebUI.setText(findTestObject('Online_OR/state'), findTestData('mydata').getValue(7, 1))
+WebUI.setText(findTestObject('Online_OR/state'), findTestData('mydata').getValue(7, rowNum))
 
 'Select Country India'
-WebUI.setText(findTestObject('Online_OR/country'), findTestData('mydata').getValue(8, 1))
+WebUI.setText(findTestObject('Online_OR/country'), findTestData('mydata').getValue(8, rowNum))
 
 'Enter Phone'
-WebUI.setText(findTestObject('Online_OR/phone'), findTestData('mydata').getValue(9, 1))
+WebUI.setText(findTestObject('Online_OR/phone'), findTestData('mydata').getValue(9, rowNum))
 
 'Click on input same as billing address'
 WebUI.click(findTestObject('Object Repository/Online_OR/input_Same as billing address_'))
 
 'Enter Email'
-WebUI.setText(findTestObject('Online_OR/email'), findTestData('mydata').getValue(1, 1))
+WebUI.setText(findTestObject('Online_OR/email'), findTestData('mydata').getValue(1, rowNum))
 
 'Clcik on Submit button'
 WebUI.click(findTestObject('Object Repository/Online_OR/input_Go Back_submit'))
 
-
+}
