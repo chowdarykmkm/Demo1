@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>MySuite</name>
+   <name>MySuiteFirfox</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <lastRun>2018-11-29T12:49:36</lastRun>
@@ -10,9 +10,9 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>c6ca1ec6-b549-49f1-ac4a-84f5a578cb97</testSuiteGuid>
+   <testSuiteGuid>52193c8a-b157-4670-b542-91c41547c3e8</testSuiteGuid>
    <testCaseLink>
-      <guid>35374f8b-e14d-42e0-98ff-527a9304ace5</guid>
+      <guid>52509b4c-2428-4284-b225-a52b1832a199</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/BuyOnlineProduct</testCaseId>
