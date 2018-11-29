@@ -10,8 +10,11 @@ import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+
+import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.Keys as Keys
 
 
@@ -23,14 +26,24 @@ WebUI.navigateToUrl('http://store.demoqa.com/')
 
 WebUI.maximizeWindow()
 
+Thread.sleep(1000)
 
 'Click on Buy button'
 WebUI.click(findTestObject('Object Repository/Online_OR/span_Buy Now'))
+Thread.sleep(1000)
+
 
 WebUI.click(findTestObject('Object Repository/Online_OR/input_INR12000.00_Buy'))
 
+Thread.sleep(1000)
+
+
 'Click on checkout button'
 WebUI.click(findTestObject('Object Repository/Online_OR/a_1 item  CartCheckout'))
+	
+
+WebUI.waitForElementVisible(findTestObject('Online_OR/continue'), 10)
+
 
 'Click on continue button'
 WebUI.click(findTestObject('Online_OR/continue'))
