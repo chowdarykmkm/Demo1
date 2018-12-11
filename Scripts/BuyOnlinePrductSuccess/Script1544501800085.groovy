@@ -81,6 +81,6 @@ import org.openqa.selenium.Keys as Keys
     'Clcik on Submit button'
     WebUI.click(findTestObject('Object Repository/Online_OR/input_Go Back_submit'))
 
-    WebUI.verifyTextPresent('Thank you, your purchase is pending. You will be', false)
+    WebUI.verifyTextPresent('Thank you, your purchase is pending. You will be', true)
 
 
