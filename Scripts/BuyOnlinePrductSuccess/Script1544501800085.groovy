@@ -83,4 +83,4 @@ import org.openqa.selenium.Keys as Keys
 
     WebUI.verifyTextPresent('Thank you, your purchase is pending. You will be', true)
 
-
+	
